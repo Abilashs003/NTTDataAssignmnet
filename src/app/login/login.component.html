@@ -1,0 +1,61 @@
+<section class="hero is-primary is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+          <form
+            class="box"
+            #loginForm="ngForm"
+            (ngSubmit)="submit(loginForm.form)"
+          >
+            <div class="field">
+              <label for="" class="label">Username</label>
+              <div class="control has-icons-left">
+                <input
+                  type="text"
+                  ngModel
+                  placeholder="e.g. admin"
+                  class="input"
+                  required
+                  #userName="ngModel"
+                  id="userName"
+                  name="userName"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label">Password</label>
+              <div class="control has-icons-left">
+                <input
+                  ngModel
+                  name="password"
+                  type="password"
+                  placeholder="*******"
+                  class="input"
+                  required
+                  #password="ngModel"
+                  id="password"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
+            </div>
+            <!-- <div class="field">
+              <label for="" class="checkbox">
+                <input type="checkbox" />
+                Remember me
+              </label>
+            </div> -->
+            <div class="field">
+              <button class="button is-success">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
