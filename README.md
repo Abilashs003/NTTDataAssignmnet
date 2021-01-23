@@ -1,27 +1,74 @@
-# NTTDataCA
+# NTT Data Coding Assigment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+Assignment Criteria :
+
+1. You have a sheet with user data with their login times and other details.
+2. The task is to prepare a small webApp with two pages:
+3. Login page: where user can login with a password
+4. dashboard: after logging in, user can see all the relevant data from the sheet on the dashboard. the dashboard should also contain a search bar to search for other users.
+5. The dashboard should be easily navigable and clear.
+6. You can prepare this using any tech stack.
+7. Try to be imaginative with the webApp and try including animation and graph wherever possible.
+
+## Tech Stack used for fast prototype
+
+- Angular Framework
+- CSS styling - Bulma for responsive design
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular frontend :`ng serve` to run in localhost 4200
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Application Snapshot on all devices
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Application is made responsive so it can be used in all devices
 
-## Running end-to-end tests
+###### Wider Screens (Tablet, Desktop)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![](image/README/1611402831604.png)
 
-## Further help
+![](image/README/1611402853189.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![](image/README/1611402958153.png)
+
+###### Smaller Screens( Mobile Devices)
+
+![](image/README/1611402933949.png)
+
+## Docker File
+
+Created docker file for hosting it in a container (nttData.dockerfile)
+
+commands to create image of those docker files
+
+> docker image build -t nttdataassignmnet -f nttData.dockerfile ./
+
+## Assignment Acceptance Criteria
+
+The task is to prepare a small webApp with two pages:
+
+- Login page
+- Data Viewing page
+
+Login page: where user can login with a password
+
+- default username : admin
+- default password : admin
+
+dashboard: after logging in, user can see all the relevant data from the sheet on the dashboard. the dashboard should also contain a search bar to search for other users.
+
+![](image/README/1611403265418.png)
+
+Search bar : global search bar which searches all the elements from the table
+
+The dashboard should be easily navigable and clear
+
+- Dashboard is added inside the container hence it is easily navigable
+
+Try to be imaginative with the webApp and try including animation and graph wherever possible
+
+- Still not achieved will update for next update.
